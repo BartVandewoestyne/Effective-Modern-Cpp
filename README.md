@@ -1,4 +1,4 @@
-# Effective Modern Cpp
+# Effective Modern C++
 
 I was an official reviewer for Scott Meyer his "Effective Modern C++" book.  I
 have reviewed a large part of it (not all 42 items though).  I accepted draft
