@@ -1,0 +1,3 @@
+add_executable(auto_type_deduction auto_type_deduction.cpp)
+add_executable(auto_deduction_vs_template_deduction auto_deduction_vs_template_deduction.cpp)
+add_executable(function_return_type_deduction function_return_type_deduction.cpp)
