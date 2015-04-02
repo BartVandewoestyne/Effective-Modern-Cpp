@@ -11,9 +11,14 @@
 
 #include "uref_cpp11.h"
 
+std::deque<std::string> makeStringDeque()   // factory function
+{
+  std::deque<std::string> ds;
+  return ds;
+}
+
 int main()
 {
-  std::deque<std::string> makeStringDeque();   // factory function
   
   // make copy of 5th element of deque returned
   // from makeStringDeque
