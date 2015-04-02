@@ -2,6 +2,9 @@ cmake_minimum_required(VERSION 2.6)
 
 project(Effective_Modern_C++ CXX)
 
+# Uncomment this to use clang++ to compile.
+SET (CMAKE_CXX_COMPILER "/usr/bin/clang++")
+
 # TODO: this flag is valid for g++, but we should make sure that the code
 # compiles with any C++ compiler, so make this more portable.  Also, some files
 # should be compiled as C++11, others as C++14.  Find out how we can
