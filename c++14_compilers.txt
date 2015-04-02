@@ -1,7 +1,2 @@
-Clang 3.4 supports all C++14 features, see
-http://cpprocks.com/c1114-compiler-and-library-shootout/
-
-http://coliru.stacked-crooked.com/ has clang version 3.5 (trunk 198621)
-The compile command to use at the bottom is:
-
-  clang -std=c++1y main.cpp && ./a.out
+Clang supports all C++14 features from version 3.4 on.
+-> see http://clang.llvm.org/cxx_status.html
