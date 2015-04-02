@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 2.6)
+
+project(Effective_Modern_C++ CXX)
+
+# TODO: this flag is valid for g++, but we should make sure that the code
+# compiles with any C++ compiler, so make this more portable.  Also, some files
+# should be compiled as C++11, others as C++14.  Find out how we can
+# differentiate.
+set(CMAKE_CXX_FLAGS "-std=c++11")
+
+add_subdirectory(Item01_Understand_template_type_deduction)
+add_subdirectory(Item02_Understand_auto_type_deduction)
+add_subdirectory(Item03_Understand_decltype)
+add_subdirectory(Item04_Know_how_to_view_deduced_types)
+add_subdirectory(Item05_Prefer_auto_to_explicit_type_declarations)
+add_subdirectory(Item06_Use_the_explicitly_typed_initializer_idiom_when_auto_deduces_undesired_types)
+add_subdirectory("Item07_Distinguish_between()_and_{}_when_creating_objects")
+add_subdirectory(Item09_Prefer_alias_declarations_to_typedefs)
+add_subdirectory(Item08_Prefer_nullptr_to_0_and_NULL)
+add_subdirectory(Item10_Prefer_scoped_enums_to_unscoped_enums)
+add_subdirectory(Item11_Prefer_deleted_functions_to_private_undefined_ones)
+add_subdirectory(Item12_Declare_overriding_functions_override)
+add_subdirectory(Item13_Prefer_const_iterators_to_iterators)
+add_subdirectory(Item14_Declare_functions_noexcept_if_they_wont_emit_exceptions)
+add_subdirectory(Item16_Make_const_member_functions_thread-safe)
+add_subdirectory(Item17_Understand_special_member_function_generation)
+add_subdirectory(Item18_Use_std_unique_ptr_for_exclusive-ownership_resource_management)
+add_subdirectory(Item19_Use_std_shared_ptr_for_shared-ownership_resource_management)
