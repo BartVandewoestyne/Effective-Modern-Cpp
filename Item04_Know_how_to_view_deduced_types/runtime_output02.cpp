@@ -24,8 +24,8 @@ void f(const T& param)              // be called
                                                       // param's
                                                       // type
 
-  TD<T> TType;                    // elicit errors containing
-  TD<decltype(param)> paramType;  // T's and param's types
+//  TD<T> TType;                    // elicit errors containing
+//  TD<decltype(param)> paramType;  // T's and param's types
 }
 
 std::vector<Widget> createVec()    // factory function
