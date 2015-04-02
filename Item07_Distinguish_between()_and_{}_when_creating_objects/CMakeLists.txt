@@ -1,0 +1,7 @@
+add_executable(constructor_overload_resolution constructor_overload_resolution.cpp)
+add_executable(initialization_values initialization_values.cpp)
+add_executable(initializer_lists1 initializer_lists1.cpp)
+add_executable(initializer_lists2 initializer_lists2.cpp)
+add_executable(initializer_lists3 initializer_lists3.cpp)
+add_executable(initializer_lists4 initializer_lists4.cpp)
+add_executable(parenthesis_braces_in_templates parenthesis_braces_in_templates.cpp)
