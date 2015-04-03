@@ -9,8 +9,8 @@ and pointed out places where non-native English speakers (a significant part of
 the readership) might be confused or be unfamiliar with the vocabulary Scott had
 chosen.
 
-This repository contains my compileable implementation for the code in the book.
-It is not officially linked to the book or Scott.  It contains my personal
+This repository contains my compilable implementation for the code in the book.
+It is not officially linked to the book nor to Scott.  It contains my personal,
 practical hands-on implementation of the sample code.  My goal was to provide
 the C++ community with something that can be used in a hands-on way to play with
 the concepts explained in the book.  Feel free to send me comments and
