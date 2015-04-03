@@ -1,3 +1,6 @@
+                               Things to Remember
+                               ------------------
+
 * std::shared_ptrs offer convenience approaching that of garbage collection for
   the shared lifetime management of arbitrary resources.
 
