@@ -1,0 +1,9 @@
+                               Things to Remember
+                               ------------------
+
+* Overloading on universal references almost always leads to the universal
+  reference overload being called more frequently than expected.
+
+* Perfect-forwarding constructors are especially problematic, because they're
+  typically better matches than copy constructors for non-const lvalues, and
+  they can hijack derived class calls to base class copy and move constructors.
