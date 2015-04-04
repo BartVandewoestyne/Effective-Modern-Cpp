@@ -11,7 +11,7 @@ chosen.
 
 This repository contains my compilable implementation for the code in the book.
 It is not officially linked to the book nor to Scott.  It contains my personal,
-practical hands-on implementation of the sample code.  My goal was to provide
+practical hands-on implementation of the sample code.  My goal is to provide
 the C++ community with something that can be used in a hands-on way to play with
 the concepts explained in the book.  Feel free to send me comments and
 questions, or to take a look at the TODO-list and send me pull-requests.
