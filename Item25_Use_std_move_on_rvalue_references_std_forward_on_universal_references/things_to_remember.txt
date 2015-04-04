@@ -1,0 +1,11 @@
+                               Things to Remember
+                               ------------------
+
+* Apply std::move to rvalue references and std::forward to universal references
+  the last time each is used.
+
+* Do the same thing for rvalue references and universal references being
+  returned from functions that return by value.
+
+* Never apply std::move or std::forward to local objects if they would otherwise
+  be eligible for the return value optimization.
