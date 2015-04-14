@@ -8,6 +8,8 @@
  *   move their contents.  For others, it's because the truly cheap move
  *   operations the containers offer come with caveats the container elements
  *   can't satisfy.
+ *
+ * TODO: time this.
  */
 
 #include <array>
