@@ -1,0 +1,10 @@
+                               Things to Remember
+                               ------------------
+
+* Perfect forwarding fails when template type deduction fails or when it deduces
+  the wrong type.
+
+* The kinds of arguments that lead to perfect forwarding failure are braced
+  initializers, null pointers expressed as 0 or NULL, declaration-only integral
+  const static data members, template and overloaded function names, and
+  bitfields.
