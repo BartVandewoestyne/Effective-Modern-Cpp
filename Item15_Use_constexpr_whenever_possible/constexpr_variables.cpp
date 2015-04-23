@@ -6,12 +6,13 @@
  *   contexts include specification of array sizes, integral template arguments
  *   (including lengths of std::array objects), enumerator values, alignment
  *   specifiers, and more.  If you want to use a variable for these kind of
- *   thigns, you certainly want to declare it constexpr, because then compilers
+ *   things, you certainly want to declare it constexpr, because then compilers
  *   will ensure that it has compile-time value.
  *
  *   - const doesn't offer the same guarantee as constexpr, because const
  *   objects need not be initialized with values known during compilation.
  */
+
 #include <array>
 
 int main()
@@ -28,6 +29,8 @@ int main()
 
   std::array<int, arraySize2> data2;  // fine, arraySize
                                       // is constexpr
+
+
 
   const auto arraySize = sz;          // fine, arraySize is
                                       // const copy of sz
