@@ -1,0 +1,8 @@
+                               Things to Remember
+                               ------------------
+
+* Lambdas are more readable, more expressive, and may be more efficient than
+  using std::bind.
+
+* In C++11 only, std::bind may be useful for implementing move capture or
+  for binding objects with templatized function call operators.

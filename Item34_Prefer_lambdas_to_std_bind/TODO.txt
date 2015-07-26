@@ -1,0 +1,4 @@
+TODO:
+
+* Make things compile.
+* Add key ideas.
