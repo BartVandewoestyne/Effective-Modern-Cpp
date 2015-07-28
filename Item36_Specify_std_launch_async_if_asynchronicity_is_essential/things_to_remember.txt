@@ -1,0 +1,11 @@
+                               Things to Remember
+                               ------------------
+
+* The default launch policy for std::async permits both asynchronous and
+  synchronous task execution.
+
+* This flexibility leads to uncertainty when accessing thread_locals, implies
+  that the task may never execute, and affects program logic for timeout-based
+  wait calls.
+
+* Specify std::launch::async if asynchronous task execution is essential.
