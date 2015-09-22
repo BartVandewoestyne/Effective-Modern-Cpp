@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.6)
 project(Effective_Modern_C++ CXX)
 
 # Uncomment this to use clang++ to compile.
-SET (CMAKE_CXX_COMPILER "/usr/bin/clang++-3.5")
+#SET (CMAKE_CXX_COMPILER "/usr/bin/clang++-3.5")
 
 # TODO: this flag is valid for g++, but we should make sure that the code
 # compiles with any C++ compiler, so make this more portable.  Also, some files
@@ -46,3 +46,4 @@ add_subdirectory(Item33_Use_decltype_on_autorr_parameters_to_std_forward_them)
 #add_subdirectory(Item34_Prefer_lambdas_to_std_bind)
 add_subdirectory(Item35_Prefer_task-based_programming_to_thread-based)
 add_subdirectory(Item36_Specify_std_launch_async_if_asynchronicity_is_essential)
+add_subdirectory(Item37_Make_std_threads_unjoinable_on_all_paths)
