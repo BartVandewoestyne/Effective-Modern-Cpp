@@ -19,7 +19,7 @@ void f(const T& param)
   using boost::typeindex::type_id_with_cvr;
 
   // show T
-  cout << "T =      "
+  cout << "T =     "
        << type_id_with_cvr<T>().pretty_name()
        << '\n';
 
