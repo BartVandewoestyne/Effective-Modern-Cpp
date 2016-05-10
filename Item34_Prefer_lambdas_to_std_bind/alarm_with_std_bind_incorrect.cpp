@@ -1,4 +1,5 @@
 #include "alarm.h"
+#include <future>
 
 using namespace std::chrono;           // as above
 using namespace std::literals;

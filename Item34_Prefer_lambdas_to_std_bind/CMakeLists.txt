@@ -1,3 +1,4 @@
+set_source_files_properties(alarm_with_lambda_cpp11.cpp PROPERTIES COMPILE_FLAGS "-std=gnu++14 -std=c++14")
 add_executable(alarm_with_lambda_cpp11 alarm_with_lambda_cpp11.cpp)
 
 #set_source_files_properties(alarm_with_lambda_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
