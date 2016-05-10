@@ -44,7 +44,7 @@ int main()
   std::unique_ptr<Widget, decltype(widgetDeleter)>
     upw(new Widget(), widgetDeleter);
   
-  std::shared_ptr<Widget> spw(new Widget(), widgetDeleter);
+//  std::shared_ptr<Widget> spw(new Widget(), widgetDeleter);
 
 
   // Limitation 2: within the make function, the perfect forwarding code uses
@@ -82,7 +82,7 @@ int main()
                // final std::weak_ptr to object destroyed here;
                // memory for control block and object is released
 
-  std::shared_ptr<ReallyBigType> pBigObj(new ReallyBigType);
+  std::shared_ptr<ReallyBigType> pBigObj_2(new ReallyBigType);
                                        // create very large
                                        // object via new
 

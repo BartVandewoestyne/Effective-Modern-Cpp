@@ -1,7 +1,3 @@
-#set_source_files_properties(constraining_templates02_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-#set_source_files_properties(constraining_templates03_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-#set_source_files_properties(constraining_templates04_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-
 set_source_files_properties(constraining_templates02_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14")
 set_source_files_properties(constraining_templates03_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14")
 set_source_files_properties(constraining_templates04_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14")

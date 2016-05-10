@@ -1,4 +1,3 @@
-#set_source_files_properties(std_move_in_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
 set_source_files_properties(std_move_in_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14")
 
 add_executable(typical_use_of_std_forward

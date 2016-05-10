@@ -1,6 +1,6 @@
 include_directories(../)
 
-set_source_files_properties(widget.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
+set_source_files_properties(widget.cpp PROPERTIES COMPILE_FLAGS "-std=c++14")
 
 add_library(widget_pimpl_unique_ptr widget.cpp)
 
