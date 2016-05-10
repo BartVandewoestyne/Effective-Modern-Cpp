@@ -1,16 +1,30 @@
-#add_executable(default_launch_policy default_launch_policy.cpp)
+add_executable(default_launch_policy default_launch_policy.cpp)
+# pas très propre, faudrait une version avec cmake ...
+target_link_libraries (default_launch_policy pthread)
 
-#add_executable(guaranteeing_truly_asynchronous_execution guaranteeing_truly_asynchronous_execution.cpp)
+add_executable(guaranteeing_truly_asynchronous_execution guaranteeing_truly_asynchronous_execution.cpp)
+# pas très propre, faudrait une version avec cmake ...
+target_link_libraries(guaranteeing_truly_asynchronous_execution pthread)
 
-#add_executable(interesting_implications interesting_implications.cpp)
+add_executable(interesting_implications interesting_implications.cpp)
+# pas très propre, faudrait une version avec cmake ...
+target_link_libraries(interesting_implications pthread)
 
-#add_executable(really_async_cpp11 really_async_cpp11.cpp)
+add_executable(really_async_cpp11 really_async_cpp11.cpp)
+target_link_libraries(really_async_cpp11 pthread)
 
-#set_source_files_properties(really_async_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-#add_executable(really_async_cpp14 really_async_cpp14.cpp)
+set_source_files_properties(really_async_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14")
+add_executable(really_async_cpp14 really_async_cpp14.cpp)
+target_link_libraries(really_async_cpp14 pthread)
 
-#add_executable(thread_local_storage thread_local_storage.cpp)
+add_executable(thread_local_storage thread_local_storage.cpp)
+target_link_libraries(thread_local_storage pthread)
 
-#add_executable(wait-based_loops wait-based_loops.cpp)
+# url: http://stackoverflow.com/questions/35856969/chrono-literals-is-not-a-namespace-name
+set_source_files_properties(wait-based_loops.cpp PROPERTIES COMPILE_FLAGS "-std=gnu++14 -std=c++14")
+add_executable(wait-based_loops wait-based_loops.cpp)
+target_link_libraries(wait-based_loops pthread)
 
-#add_executable(wait-based_loops_fixed wait-based_loops_fixed.cpp)
+set_source_files_properties(wait-based_loops_fixed.cpp PROPERTIES COMPILE_FLAGS "-std=gnu++14 -std=c++14")
+add_executable(wait-based_loops_fixed wait-based_loops_fixed.cpp)
+target_link_libraries(wait-based_loops_fixed pthread)
