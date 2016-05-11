@@ -6,8 +6,4 @@ SET(NAMES_SAMPLES
 )
 subitems_add_executables("${NAMES_SAMPLES}" "ADD_FLAG_FOR_CXX_11")
 
-subitem_add_executable(
-  NAME template_example_templatized_cpp14
-  SRC template_example_templatized_cpp14.cpp
-  ADD_FLAG_FOR_CXX_14
-)
+subitems_add_executables("template_example_templatized_cpp14" "ADD_FLAG_FOR_CXX_14")

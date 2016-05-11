@@ -1,7 +1,4 @@
-subitem_add_executable(
-  NAME Item12
-  SRC Item12.cpp
-  ADD_FLAG_FOR_CXX_11)
+subitems_add_executables("Item12" "ADD_FLAG_FOR_CXX_11")
 
 SET(NAMES_SAMPLES
     pointer_example

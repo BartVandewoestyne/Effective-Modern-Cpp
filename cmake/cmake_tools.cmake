@@ -16,6 +16,7 @@ macro(add_std_cxx11_flag SRC_FILES)
 endmacro()
 
 function(SUBITEM_ADD)
+  # url: https://cmake.org/cmake/help/v3.0/module/CMakeParseArguments.html
   set(options
       IS_EXECUTABLE
       IS_LIBRARY
