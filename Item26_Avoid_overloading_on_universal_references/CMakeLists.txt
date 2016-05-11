@@ -1,4 +1,7 @@
-add_executable(logAndAdd_inefficient logAndAdd_inefficient.cpp)
-add_executable(logAndAdd_with_uref logAndAdd_with_uref.cpp)
-add_executable(logAndAdd_with_uref_overloaded logAndAdd_with_uref_overloaded.cpp)
-add_executable(Person Person.cpp)
+SET(SAMPLES_NAMES
+    Person
+    logAndAdd_inefficient
+    logAndAdd_with_uref
+    logAndAdd_with_uref_overloaded
+)
+subitems_add_executables("${SAMPLES_NAMES}" "ADD_FLAG_FOR_CXX_11")

@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
+#project(Effective_Modern_C++ C CXX)
 project(Effective_Modern_C++ C CXX)
 
 # Uncomment this to use clang++ to compile.
@@ -9,7 +10,13 @@ project(Effective_Modern_C++ C CXX)
 # compiles with any C++ compiler, so make this more portable.  Also, some files
 # should be compiled as C++11, others as C++14.  Find out how we can
 # differentiate.
-set(CMAKE_CXX_FLAGS "-std=c++11")
+#set(CMAKE_CXX_FLAGS "-std=c++11")
+
+FIND_PACKAGE ( Threads REQUIRED )
+
+set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH}" "${PROJECT_SOURCE_DIR}/cmake")
+
+include(cmake_tools)
 
 add_subdirectory(Item01_Understand_template_type_deduction)
 add_subdirectory(Item02_Understand_auto_type_deduction)

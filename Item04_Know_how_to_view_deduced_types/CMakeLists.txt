@@ -1,9 +1,21 @@
-add_executable(runtime_output01 runtime_output01.cpp)
-add_executable(runtime_output02 runtime_output02.cpp)
-add_executable(boost_type_index boost_type_index.cpp)
+SET(NAMES_SAMPLES
+  runtime_output01
+  runtime_output02
+)
+SET(FLAGS_FOR_SAMPLES
+  ADD_FLAG_FOR_CXX_11
+)
+subitems_add_executables("${NAMES_SAMPLES}" "${FLAGS_FOR_SAMPLES}")
 
-add_library(ide_editors.cpp
-            compiler_diagnostics.cpp)
+subitem_add_executable(
+  NAME boost_type_index
+  SRC boost_type_index.cpp
+  ADD_FLAG_FOR_CXX_11
+  USE_BOOST
+)
 
-find_package(Boost 1.56 REQUIRED)
-target_link_libraries(boost_type_index ${Boost_LIBRARIES})
+subitem_add_library(
+  NAME ide_editors
+  SRC compiler_diagnostics.cpp
+  ADD_FLAG_FOR_CXX_11
+)

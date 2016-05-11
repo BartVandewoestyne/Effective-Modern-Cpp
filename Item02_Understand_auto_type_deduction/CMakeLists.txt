@@ -1,5 +1,14 @@
-set_source_files_properties(function_return_type_deduction.cpp PROPERTIES COMPILE_FLAGS -std=c++14)
+subitem_add_executable(
+  NAME auto_type_deduction
+  SRC auto_type_deduction.cpp
+  ADD_FLAG_FOR_CXX_11)
 
-add_executable(auto_type_deduction auto_type_deduction.cpp)
-add_executable(auto_deduction_vs_template_deduction auto_deduction_vs_template_deduction.cpp)
-add_executable(function_return_type_deduction function_return_type_deduction.cpp)
+subitem_add_executable(
+  NAME auto_deduction_vs_template_deduction
+  SRC auto_deduction_vs_template_deduction.cpp
+  ADD_FLAG_FOR_CXX_11)
+
+subitem_add_executable(
+  NAME function_return_type_deduction
+  SRC function_return_type_deduction.cpp
+  ADD_FLAG_FOR_CXX_14)

@@ -1,11 +1,13 @@
-# TODO: check C++14 code!
+## TODO: check C++14 code!
+subitem_add_executable(
+  NAME decltype_for_complicated_lvalues
+  SRC decltype_for_complicated_lvalues.cpp
+)
 
-add_executable(decltype_for_complicated_lvalues decltype_for_complicated_lvalues.cpp)
-
-add_library(item02 problem.cpp
-#                   decltype_auto_for_function_return_types_cpp14.cpp
-#                   decltype_auto_for_normal_auto_variables_cpp14.cpp
-                   typical_cases.cpp
-                   string_deque.cpp
-#                   return_statements_cpp14.cpp
-                   )
+subitem_add_library(
+  NAME item02
+  SRC problem.cpp typical_cases.cpp string_deque.cpp
+      # decltype_auto_for_function_return_types_cpp14.cpp
+      # return_statements_cpp14.cpp
+  ADD_FLAG_FOR_CXX_11
+)

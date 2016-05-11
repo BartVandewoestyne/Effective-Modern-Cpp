@@ -1,8 +1,14 @@
-# TODO: improve this CMakeLists.txt file.
-FIND_PACKAGE ( Threads REQUIRED )
+subitem_add_library(
+  NAME item38_example1
+  SRC example1.cpp
+  ADD_FLAG_FOR_CXX_11
+  USE_PTHREAD
+)
 
-add_library(item38_example1 example1.cpp)
-TARGET_LINK_LIBRARIES ( item38_example1 ${CMAKE_THREAD_LIBS_INIT} )
-
-add_executable(item38_example2 example2.cpp)
-TARGET_LINK_LIBRARIES ( item38_example2 ${CMAKE_THREAD_LIBS_INIT} )
+subitem_add_executable(
+  NAME item38_example2
+  SRC example2.cpp
+  ADD_FLAG_FOR_CXX_11
+  USE_PTHREAD
+)
+#ps: execution result -> 'terminate called without an active exception'

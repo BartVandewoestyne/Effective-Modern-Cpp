@@ -1,3 +1,6 @@
-add_library(custom_deleters custom_deleters.cpp)
-add_library(multiple_control_blocks1 multiple_control_blocks1.cpp)
-add_library(multiple_control_blocks2 multiple_control_blocks2.cpp)
+SET(SAMPLES_NAMES
+    custom_deleters
+    multiple_control_blocks1
+    multiple_control_blocks2
+)
+subitems_add_libraries("${SAMPLES_NAMES}" "ADD_FLAG_FOR_CXX_11")

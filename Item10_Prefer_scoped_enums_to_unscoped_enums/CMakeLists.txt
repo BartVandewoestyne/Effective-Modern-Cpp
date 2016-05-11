@@ -1,3 +1,18 @@
+SET(SRC_FILES_Cxx11
+    scoped_enums.cpp
+    semantic_travesties01.cpp
+    semantic_travesties02.cpp
+    semantic_travesties03.cpp
+    forward_declaring.cpp
+    forward_declared_enums.cpp
+    underlying_type02.cpp
+    unscoped_enums_useful01.cpp
+    unscoped_enums_useful02.cpp
+    unscoped_enums_useful03.cpp
+    unscoped_enums_useful04.cpp
+)
+add_std_cxx11_flag("${SRC_FILES_Cxx11}")
+
 add_library(item10 unscoped_enums.cpp
                    scoped_enums.cpp
                    semantic_travesties01.cpp

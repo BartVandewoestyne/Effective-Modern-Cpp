@@ -1,2 +1,1 @@
-set_source_files_properties(item35.cpp PROPERTIES COMPILE_FLAGS "-std=c++14")
-add_executable(item35 item35.cpp)
+subitems_add_executables("item35" "ADD_FLAG_FOR_CXX_14")

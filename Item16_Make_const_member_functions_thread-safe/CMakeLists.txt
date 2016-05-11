@@ -1,9 +1,14 @@
-# TODO: complete this CMakeLists.txt
+subitem_add_executable(
+  NAME expensive_int
+  SRC expensive_int.cpp
+  ADD_FLAG_FOR_CXX_11
+)
 
-add_executable(expensive_int expensive_int.cpp)
-
-add_executable(undefined_behavior undefined_behavior.cpp)
-FIND_PACKAGE ( Threads REQUIRED )
-TARGET_LINK_LIBRARIES ( undefined_behavior ${CMAKE_THREAD_LIBS_INIT} )
+subitem_add_executable(
+  NAME undefined_behavior
+  SRC undefined_behavior.cpp
+  ADD_FLAG_FOR_CXX_11
+  USE_PTHREAD
+)
 
 #add_library(roots Polynomial.cpp)

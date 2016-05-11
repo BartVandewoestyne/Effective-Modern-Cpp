@@ -1,7 +1,5 @@
-FIND_PACKAGE ( Threads REQUIRED )
-
-add_executable(example1 example1.cpp)
-TARGET_LINK_LIBRARIES ( example1 ${CMAKE_THREAD_LIBS_INIT} )
-
-add_executable(example2 example2.cpp)
-TARGET_LINK_LIBRARIES ( example2 ${CMAKE_THREAD_LIBS_INIT} )
+SET(SAMPLES_NAMES
+    example1
+    example2
+)
+subitems_add_executables("${SAMPLES_NAMES}" "ADD_FLAG_FOR_CXX_11;USE_PTHREAD")
