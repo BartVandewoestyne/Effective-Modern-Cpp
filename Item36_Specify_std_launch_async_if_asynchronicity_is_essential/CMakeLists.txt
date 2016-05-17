@@ -1,16 +1,16 @@
-add_executable(default_launch_policy default_launch_policy.cpp)
+SET(NAMES_SAMPLES
+    default_launch_policy
+    guaranteeing_truly_asynchronous_execution
+    interesting_implications
+    really_async_cpp11
+    thread_local_storage
+)
+subitems_add_executables("${NAMES_SAMPLES}" "ADD_FLAG_FOR_CXX_11;USE_PTHREAD")
 
-add_executable(guaranteeing_truly_asynchronous_execution guaranteeing_truly_asynchronous_execution.cpp)
-
-add_executable(interesting_implications interesting_implications.cpp)
-
-add_executable(really_async_cpp11 really_async_cpp11.cpp)
-
-set_source_files_properties(really_async_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-add_executable(really_async_cpp14 really_async_cpp14.cpp)
-
-add_executable(thread_local_storage thread_local_storage.cpp)
-
-add_executable(wait-based_loops wait-based_loops.cpp)
-
-add_executable(wait-based_loops_fixed wait-based_loops_fixed.cpp)
+SET(NAMES_SAMPLES
+    really_async_cpp14
+    wait-based_loops
+    wait-based_loops_fixed
+)
+subitems_add_executables("${NAMES_SAMPLES}" "ADD_FLAG_FOR_CXX_14;USE_PTHREAD")
+# url: http://stackoverflow.com/questions/35856969/chrono-literals-is-not-a-namespace-name

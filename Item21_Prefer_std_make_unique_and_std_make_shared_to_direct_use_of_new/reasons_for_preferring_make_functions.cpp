@@ -50,7 +50,7 @@ int main()
                                                       // leak!
 
   processWidget(std::make_shared<Widget>(),           // no potential
-                computePriority();                    // resource leak
+                computePriority());                    // resource leak
 
 
   // Reason 3: a special feature of make_shared is improved efficiency.

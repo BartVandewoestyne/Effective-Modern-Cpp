@@ -1,7 +1,10 @@
-add_executable(constructor_overload_resolution constructor_overload_resolution.cpp)
-add_executable(initialization_values initialization_values.cpp)
-add_executable(initializer_lists1 initializer_lists1.cpp)
-add_executable(initializer_lists2 initializer_lists2.cpp)
-add_executable(initializer_lists3 initializer_lists3.cpp)
-add_executable(initializer_lists4 initializer_lists4.cpp)
-add_executable(parenthesis_braces_in_templates parenthesis_braces_in_templates.cpp)
+SET(NAMES_SAMPLES
+  constructor_overload_resolution
+  initialization_values
+  initializer_lists1
+  initializer_lists2
+  initializer_lists3
+  initializer_lists4
+  parenthesis_braces_in_templates
+)
+subitems_add_executables("${NAMES_SAMPLES}" "ADD_FLAG_FOR_CXX_11")

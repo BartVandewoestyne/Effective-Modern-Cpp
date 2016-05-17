@@ -34,6 +34,8 @@ void addDivisorFilter()
 
   auto divisor = computeDivisor(calc1, calc2);
 
+  Filters::FilterContainer& filters = Filters::get_instance()->filters;
+
   filters.emplace_back(                              // danger!
     [&](int value) { return value % divisor == 0; }  // ref to
                                                      // divisor
@@ -59,6 +61,8 @@ void addDivisorFilter2()
 
   static auto divisor =                     // now static
     computeDivisor(calc1, calc2);
+
+  Filters::FilterContainer& filters = Filters::get_instance()->filters;
 
   filters.emplace_back(
     [=](int value)                    // captures nothing!
@@ -120,6 +124,8 @@ void doSomeWork()
 
 int main()
 {
+  Filters::FilterContainer& filters = Filters::get_instance()->filters;
+
   filters.emplace_back(                       // see Item 42 for
     [](int value) { return value % 5 == 0; }  // info on
   );                                          // emplace_back

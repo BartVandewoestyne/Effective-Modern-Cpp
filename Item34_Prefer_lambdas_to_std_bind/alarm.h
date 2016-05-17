@@ -1,6 +1,8 @@
 #ifndef ALARM_H
 #define ALARM_H
 
+#include <chrono>
+
 // typedef for a point in time (see Item 9 for syntax)
 using Time = std::chrono::steady_clock::time_point;
 

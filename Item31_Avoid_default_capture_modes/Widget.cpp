@@ -3,6 +3,8 @@
 
 void Widget::addFilter() const
 {
+  Filters::FilterContainer& filters = Filters::get_instance()->filters;
+
   // default by-value capture
   filters.emplace_back(
     [=](int value) { return value % divisor == 0; }

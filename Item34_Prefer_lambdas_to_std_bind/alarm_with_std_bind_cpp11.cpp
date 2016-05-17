@@ -1,4 +1,5 @@
 #include "alarm.h"
+#include <functional>
 
 using namespace std::chrono;           // as above
 using namespace std::placeholders;

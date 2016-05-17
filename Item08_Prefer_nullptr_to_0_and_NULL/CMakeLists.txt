@@ -1,9 +1,9 @@
-add_executable(pointer_overload pointer_overload.cpp)
-add_executable(code_clarity code_clarity.cpp)
-add_executable(template_example_flat template_example_flat.cpp)
+SET(NAMES_SAMPLES
+    pointer_overload
+    code_clarity
+    template_example_flat
+    template_example_templatized
+)
+subitems_add_executables("${NAMES_SAMPLES}" "ADD_FLAG_FOR_CXX_11")
 
-# TODO: compile this as C++11
-# add_executable(template_example_templatized template_example_templatized.cpp)
-
-# TODO: compile this as C++14
-#add_executable(template_example_templatized_cpp14 template_example_templatized_cpp14.cpp)
+subitems_add_executables("template_example_templatized_cpp14" "ADD_FLAG_FOR_CXX_14")

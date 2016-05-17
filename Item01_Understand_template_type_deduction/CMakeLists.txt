@@ -1,13 +1,20 @@
-add_executable(pinch_of_pseudocode pinch_of_pseudocode.cpp)
-add_executable(case1_const case1_const.cpp)
-add_executable(case1_non_const case1_non_const.cpp)
-add_executable(case1_pointer case1_pointer.cpp)
-add_executable(case2_uref case2_uref.cpp)
-add_executable(case3_pass_by_value case3_pass_by_value.cpp)
-add_executable(array-to-pointer_decay_rule array-to-pointer_decay_rule.cpp)
-add_executable(arrays_by_value arrays_by_value.cpp)
-add_executable(arrays_by_reference arrays_by_reference.cpp)
-add_executable(function-to-pointer_decay_rule function-to-pointer_decay_rule.cpp)
+SET(NAMES_SAMPLES
+  pinch_of_pseudocode
+  case1_const
+  case1_non_const
+  case1_pointer
+  case3_pass_by_value
+  array-to-pointer_decay_rule
+  arrays_by_value
+  arrays_by_reference
+  function-to-pointer_decay_rule
+)
+subitems_add_executables("${NAMES_SAMPLES}" "")
 
-add_library(item01 deduce_nb_array_elements.cpp
-                   array_and_pointer_parameter_equivalence.cpp)
+subitem_add_executable(NAME case2_uref SRC case2_uref.cpp ADD_FLAG_FOR_CXX_11)
+
+subitem_add_library(
+  NAME item01
+  SRC deduce_nb_array_elements.cpp array_and_pointer_parameter_equivalence.cpp
+  ADD_FLAG_FOR_CXX_11
+)

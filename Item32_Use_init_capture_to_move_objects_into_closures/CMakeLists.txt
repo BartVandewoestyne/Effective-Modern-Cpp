@@ -1,20 +1,12 @@
-set_source_files_properties(init_capture_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-add_executable(init_capture_cpp14
-               init_capture_cpp14.cpp)
+SET(SAMPLES_NAMES
+    move_capture1_cpp11
+)
+subitems_add_executables("${SAMPLES_NAMES}" "ADD_FLAG_FOR_CXX_11")
 
-set_source_files_properties(init_capture_cpp11.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-add_executable(init_capture_cpp11
-               init_capture_cpp11.cpp
-               Widget.cpp)
-
-set_source_files_properties(move_capture1_cpp14.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-add_executable(move_capture1_cpp14
-               move_capture1_cpp14.cpp)
-
-add_executable(move_capture1_cpp11
-               move_capture1_cpp11.cpp)
-
-set_source_files_properties(move_capture2.cpp PROPERTIES COMPILE_FLAGS "-std=c++14 -stdlib=libc++")
-add_executable(move_capture2
-               move_capture2.cpp)
-
+SET(SAMPLES_NAMES
+    init_capture_cpp14
+    init_capture_cpp11
+    move_capture1_cpp14
+    move_capture2
+)
+subitems_add_executables("${SAMPLES_NAMES}" "ADD_FLAG_FOR_CXX_14")
