@@ -1,5 +1,5 @@
-sudo: required
-dist: trusty
+#sudo: required
+#dist: trusty
 
 language: cpp
 
@@ -17,7 +17,6 @@ before_install:
 addons:
   apt:
     sources:
-    - ubuntu-toolchain-r-test
     - boost-latest
 
 script:
