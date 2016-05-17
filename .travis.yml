@@ -21,7 +21,7 @@ addons:
     sources:
       - boost-latest
     packages:
-      - libboost1.60-all-dev
+      - libboost1.55-all-dev
 
 script:
   - mkdir build
