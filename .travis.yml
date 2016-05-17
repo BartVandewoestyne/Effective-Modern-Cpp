@@ -1,6 +1,16 @@
 language: cpp
+
 compiler:
   - clang
   - gcc
+
 os:
   - linux
+
+script:
+  - mkdir build
+  - cd build
+  - cmake --version
+  - cmake ..
+  - cd ..
+  - make VERBOSE=1
