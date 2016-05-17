@@ -7,6 +7,10 @@ compiler:
 os:
   - linux
 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libboost1.58-dev
+
 script:
   - mkdir build
   - cd build
