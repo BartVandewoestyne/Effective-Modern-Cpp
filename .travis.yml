@@ -17,6 +17,7 @@ before_install:
 addons:
   apt:
     sources:
+    - ubuntu-toolchain-r-test
     - boost-latest
 
 script:
