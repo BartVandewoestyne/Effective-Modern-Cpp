@@ -11,15 +11,17 @@ os:
   - linux
 
 before_install:
-  - sudo apt-get install debian-archive-keyring
-  - sudo apt-key update
+#  - sudo apt-get install debian-archive-keyring
+#  - sudo apt-key update
   - sudo apt-get -qq update
-  - sudo apt-get install -y libboost-dev
+#  - sudo apt-get install -y libboost-dev
 
 addons:
   apt:
     sources:
-    - boost-latest
+      - boost-latest
+    packages:
+      - libboost1.56-dev
 
 script:
   - mkdir build
