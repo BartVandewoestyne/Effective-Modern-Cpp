@@ -6,4 +6,6 @@ add_library(ide_editors.cpp
             compiler_diagnostics.cpp)
 
 find_package(Boost 1.56 REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+
 target_link_libraries(boost_type_index ${Boost_LIBRARIES})

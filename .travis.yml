@@ -24,4 +24,5 @@ install:
 script:
   - mkdir build
   - cd build
+  - cmake --version
   - cmake -DBOOST_ROOT=$HOME .. && make VERBOSE=1
