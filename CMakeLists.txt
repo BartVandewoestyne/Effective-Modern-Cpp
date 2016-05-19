@@ -2,13 +2,18 @@ cmake_minimum_required(VERSION 2.6)
 
 project(Effective_Modern_C++ CXX)
 
-# Uncomment this to use clang++ to compile.
-#SET (CMAKE_CXX_COMPILER "/usr/bin/clang++-3.5")
+if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.9)
+        message(FATAL_ERROR "GCC version must be at least 4.9!")
+    endif()
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 3.5)
+        message(FATAL_ERROR "Clang version must be at least 3.5!")
+    endif()
+else()
+    message(WARNING "You are using an unsupported compiler!  Compilation has only been tested with Clang and GCC.")
+endif()
 
-# TODO: this flag is valid for g++, but we should make sure that the code
-# compiles with any C++ compiler, so make this more portable.  Also, some files
-# should be compiled as C++11, others as C++14.  Find out how we can
-# differentiate.
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
 add_subdirectory(Item01_Understand_template_type_deduction)
