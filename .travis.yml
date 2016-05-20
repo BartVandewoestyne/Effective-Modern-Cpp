@@ -4,6 +4,7 @@
 
 language: cpp
 
+# matrix setup based on http://genbattle.bitbucket.org/blog/2016/01/17/c++-travis-ci/
 matrix:
   include:
     - compiler: gcc
@@ -56,4 +57,4 @@ script:
   - mkdir build
   - cd build
   - cmake --version
-  - cmake -DBOOST_ROOT=$HOME .. && make VERBOSE=1
+  - cmake -DCMAKE_CXX_COMPILER=$COMPILER -DBOOST_ROOT=$HOME .. && make VERBOSE=1
