@@ -4,17 +4,23 @@ cmake_minimum_required(VERSION 2.6)
 # later versions of CMake.
 project(Effective_Modern_C++ C CXX)
 
-if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
-    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.9)
-        message(FATAL_ERROR "GCC version must be at least 4.9!")
-    endif()
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 3.5)
-        message(FATAL_ERROR "Clang version must be at least 3.5!")
-    endif()
-else()
-    message(WARNING "You are using an unsupported compiler!  Compilation has only been tested with Clang and GCC.")
-endif()
+# Only from gcc 4.9 and cland 3.5 are the options -std=c++11 and -std=c++14 available.
+# See:
+#   https://gcc.gnu.org/projects/cxx-status.html
+#   http://clang.llvm.org/cxx_status.html
+# Since CMAKE_CXX_COMPILER_VERSION is only available from CMake 2.8.10 on, we currently comment
+# this check out.
+#if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+#    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 4.9)
+#        message(FATAL_ERROR "GCC version must be at least 4.9!")
+#    endif()
+#elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+#    if (CMAKE_CXX_COMPILER_VERSION VERSION_LESS 3.5)
+#        message(FATAL_ERROR "Clang version must be at least 3.5!")
+#    endif()
+#else()
+#    message(WARNING "You are using an unsupported compiler!  Compilation has only been tested with Clang and GCC.")
+#endif()
 
 set(CMAKE_CXX_FLAGS "-std=c++11")
 
