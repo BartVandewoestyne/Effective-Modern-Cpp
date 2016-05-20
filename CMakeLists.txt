@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.6)
 
-project(Effective_Modern_C++ CXX)
+# Note: the 'C' seems necessary for CMake 3.2.2 but might not be necessary with
+# later versions of CMake.
+project(Effective_Modern_C++ C CXX)
 
 # Uncomment this to use clang++ to compile.
 SET (CMAKE_CXX_COMPILER "/usr/bin/clang++-3.5")
