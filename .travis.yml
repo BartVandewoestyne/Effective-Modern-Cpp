@@ -1,0 +1,28 @@
+sudo: required
+dist: trusty
+
+language: cpp
+
+compiler:
+  - clang
+  - gcc
+
+os:
+  - linux
+
+before_install:
+  - wget --no-verbose --output-document=boost_1_56_0.tar.bz2 http://sourceforge.net/projects/boost/files/boost/1.56.0/boost_1_56_0.tar.bz2/download
+  - export BOOST_ROOT="$TRAVIS_BUILD_DIR/../boost"
+  - export DEBIAN_FRONTEND=noninteractive
+  - mkdir -p $BOOST_ROOT
+  - tar jxf boost_1_56_0.tar.bz2 --strip-components=1 -C $BOOST_ROOT
+
+install:
+  - (cd $BOOST_ROOT; ./bootstrap.sh --with-libraries=atomic,chrono,context,coroutine,iostreams,system,test,thread)
+  - (cd $BOOST_ROOT; ./b2 threading=multi --prefix=$HOME -d0 install)
+
+script:
+  - mkdir build
+  - cd build
+  - cmake --version
+  - cmake -DBOOST_ROOT=$HOME .. && make VERBOSE=1

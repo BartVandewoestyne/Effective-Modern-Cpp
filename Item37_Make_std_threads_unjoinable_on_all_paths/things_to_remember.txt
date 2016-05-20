@@ -1,0 +1,10 @@
+                               Things to Remember
+                               ------------------
+
+* Make std::threads unjoinable on all paths.
+
+* join-on-destruction can lead to difficult-to-debug performance anomalies.
+
+* detach-on-destruction can lead to difficult-to-debug undefined behavior.
+
+* Declare std::thread objects last in lists of data members.
