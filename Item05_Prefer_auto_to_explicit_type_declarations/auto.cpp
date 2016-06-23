@@ -1,13 +1,11 @@
 /*
- * Key ideas:
+ * Key idea:
  *
- *   * Some advantages of using auto:
+ *   * Some advantages of using auto are:
  *       - avoidance of uninitialized variables
  *       - less verbose variable declarations
  *       - the ability to directly hold closures
  *       - the ability to avoid problems related to "type shortcuts"
- *
- * TODO: check whether this compiles with a C++14 compiler.
  */
 
 #include <memory>
