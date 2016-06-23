@@ -43,6 +43,7 @@ matrix:
       env: COMPILER=clang++-3.7
 
 before_install:
+  - sudo apt-get update -qq
   - wget --no-verbose --output-document=boost_1_56_0.tar.bz2 http://sourceforge.net/projects/boost/files/boost/1.56.0/boost_1_56_0.tar.bz2/download
   - export BOOST_ROOT="$TRAVIS_BUILD_DIR/../boost"
   - export DEBIAN_FRONTEND=noninteractive
