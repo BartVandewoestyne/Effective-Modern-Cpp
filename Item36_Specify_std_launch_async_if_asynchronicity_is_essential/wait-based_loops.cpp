@@ -19,7 +19,7 @@ void f()                               // f sleeps for 1 second,
 
 int main()
 {
-    auto fut = std::async(f)           // run f asynchronously
+    auto fut = std::async(f);          // run f asynchronously
                                        // (conceptually)
     
     while (fut.wait_for(100ms) !=      // loop until f has

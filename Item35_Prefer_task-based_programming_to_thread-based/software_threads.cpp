@@ -1,5 +1,5 @@
 /**
- * Key ideas:
+ * Key idea:
  *
  *   - Software threads are a limited resource.  If you try to create more than the system
  *     can provide, a std::system_error exception is thrown.  This is true even if the function

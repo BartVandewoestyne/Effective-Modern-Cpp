@@ -17,7 +17,7 @@ void f()
 
 int main()
 {
-    auto fut = std::async(f)           // as above
+    auto fut = std::async(f);          // as above
     
     if (fut.wait_for(0s) ==            // if task is
         std::future_status::deferred)  // deferred...
