@@ -6,9 +6,6 @@
  *
  *   2. When auto is used in a parameter type specification in a C++14 lambda
  *      expression, things won't compile.
- *
- * TODO:
- *   * Make sure this file compiles as C++14.
  */
 
 #include <vector>
