@@ -1,3 +1,5 @@
+set_source_files_properties(overriding_explained.cpp PROPERTIES COMPILE_FLAGS -std=c++14)
+
 add_executable(overriding_explained overriding_explained.cpp)
 add_executable(reference_qualifiers_example reference_qualifiers_example.cpp)
 add_library(typical_errors typical_errors.cpp)

@@ -24,14 +24,12 @@ public:
 
 int main()
 {
-// TODO: wait for C++14 compiler to be available to check this.
-//
-//  std::unique_ptr<Base> upb =     // create base class pointer
-//    std::make_unique<Derived>();  // to derived class object;
-//                                  // see Item 21 for info on
-//  // ...                          // std::make_unique
-//
-//  upb->doWork();                  // call doWork through base
-//                                  // class ptr; derived class
-//                                  // function is invoked
+  std::unique_ptr<Base> upb =     // create base class pointer
+    std::make_unique<Derived>();  // to derived class object;
+                                  // see Item 21 for info on
+  // ...                          // std::make_unique
+
+  upb->doWork();                  // call doWork through base
+                                  // class ptr; derived class
+                                  // function is invoked
 }
