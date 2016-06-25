@@ -5,8 +5,6 @@
  *   up a bit short is when you want to write maximally generic library code.
  *
  *   This works fine in C++14, but, sadly, not in C++11.
- *
- * TODO: C++14
  */
 
 #include <algorithm>
