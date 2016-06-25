@@ -8,6 +8,7 @@
 
 #include <string>
 #include <tuple>
+#include <type_traits>
 
 using UserInfo =               // type alias; see Item 9
   std::tuple<std::string,      // name
