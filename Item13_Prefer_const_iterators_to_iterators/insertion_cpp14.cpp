@@ -32,6 +32,6 @@ int main()
 
   std::vector<int> values;                            // as before
 
-  findAndInsert(values, 1983, 1998)
+  findAndInsert(values, 1983, 1998);
 
 }
