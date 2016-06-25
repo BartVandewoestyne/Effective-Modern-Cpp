@@ -9,8 +9,6 @@
  *   - A special feature of std::make_shared is improved efficiency.
  */
 
-// TODO: this doesn't compile yet, make it to compile!
-
 #include <iostream>
 #include <memory>
 #include <vector>
