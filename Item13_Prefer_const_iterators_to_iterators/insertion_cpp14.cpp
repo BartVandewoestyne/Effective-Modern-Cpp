@@ -8,6 +8,7 @@
  */
 
 #include <algorithm>
+#include <iterator>
 #include <vector>
 
 template<typename C, typename V>
