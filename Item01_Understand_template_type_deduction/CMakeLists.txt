@@ -1,3 +1,19 @@
+set_source_files_properties(
+    pinch_of_pseudocode.cpp
+    case1_const.cpp
+    case1_non_const.cpp
+    case1_pointer.cpp
+    case2_uref.cpp
+    case3_pass_by_value.cpp
+    array-to-pointer_decay_rule.cpp
+    arrays_by_value.cpp
+    arrays_by_reference.cpp
+    function-to-pointer_decay_rule.cpp
+    deduce_nb_array_elements.cpp
+    array_and_pointer_parameter_equivalence.cpp
+    PROPERTIES COMPILE_FLAGS -std=c++11
+)
+
 add_executable(pinch_of_pseudocode pinch_of_pseudocode.cpp)
 add_executable(case1_const case1_const.cpp)
 add_executable(case1_non_const case1_non_const.cpp)
