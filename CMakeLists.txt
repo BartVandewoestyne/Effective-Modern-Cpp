@@ -22,6 +22,8 @@ project(Effective_Modern_C++ C CXX)
 #    message(WARNING "You are using an unsupported compiler!  Compilation has only been tested with Clang and GCC.")
 #endif()
 
+set(CMAKE_CXX_FLAGS "-std=c++11")
+
 find_package(Threads REQUIRED)
 
 add_subdirectory(Item01_Understand_template_type_deduction)
