@@ -10,19 +10,26 @@
  *   executable statement: a return.
  */
 
+#include <array>
+
+int readFromDB(const char* s)
+{
+  return 1;
+}
+
 constexpr                                     // pow's a constexpr func
 int pow(int base, int exp) noexcept           // that never throws
 {
-  return (exp == 0 ? 1
-         : base * pow(base, exp - 1));
+  return (exp == 0 ? 1 : base * pow(base, exp - 1));
 }
 
 int main()
 {
   // compile-time-compute the size of a std::array:
   constexpr auto numConds = 5;                // # of conditions
-  std::array<int, pow(2, numConds)> results;  // results has
-                                              // 2^{numConds} elements
+  std::array<int, pow(3, numConds)> results;  // results has
+                                              // 3^{numConds}
+                                              // elements
 
   // runtime context:
   auto base = readFromDB("base");             // get these values

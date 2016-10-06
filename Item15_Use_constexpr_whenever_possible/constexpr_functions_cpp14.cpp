@@ -5,6 +5,13 @@
  *   looser.
  */
 
+#include <array>
+
+int readFromDB(const char* s)
+{
+  return 1;
+}
+
 constexpr int pow(int base, int exp)          // C++14
 {
   auto result = 1;
@@ -15,9 +22,11 @@ constexpr int pow(int base, int exp)          // C++14
 
 int main()
 {
+  // compile-time-compute the size of a std::array:
   constexpr auto numConds = 5;                // # of conditions
-  std::array<int, pow(2, numConds)> results;  // results has
-                                              // 2^{numConds} elements
+  std::array<int, pow(3, numConds)> results;  // results has
+                                              // 3^{numConds}
+                                              // elements
 
   // runtime context:
   auto base = readFromDB("base");             // get these values

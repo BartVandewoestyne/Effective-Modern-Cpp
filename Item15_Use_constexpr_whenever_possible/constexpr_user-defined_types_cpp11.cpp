@@ -13,6 +13,7 @@
  *   functions that call Point's getters and to initialize constexpr objects
  *   with the results of such functions.
  */
+
 #include "Point_cpp11.h"
 
 constexpr Point

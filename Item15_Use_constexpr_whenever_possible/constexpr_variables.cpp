@@ -27,7 +27,7 @@ int main()
   constexpr auto arraySize2 = 10;     // fine, 10 is a
                                       // compile-time constant
 
-  std::array<int, arraySize2> data2;  // fine, arraySize
+  std::array<int, arraySize2> data2;  // fine, arraySize2
                                       // is constexpr
 
 
