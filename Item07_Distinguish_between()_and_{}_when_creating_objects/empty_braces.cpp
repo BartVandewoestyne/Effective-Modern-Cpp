@@ -7,6 +7,12 @@
  *     empty std::initializer_list, you do it by making the empty braces
  *     a constructor argument - by putting the empty braces inside the
  *     parentheses or braces demarcating what you're passing.
+ *
+ *   * For more discussion, see also blog post [1].
+ *
+ * References:
+ *
+ *   [1] http://scottmeyers.blogspot.be/2016/11/help-me-sort-out-meaning-of-as.html
  */
 
 #include <iostream>
