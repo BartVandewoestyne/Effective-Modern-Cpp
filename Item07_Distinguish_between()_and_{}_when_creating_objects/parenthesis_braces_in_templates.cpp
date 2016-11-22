@@ -8,7 +8,7 @@
 
 #include <vector>
 
-template<typename T,        // type of object to create
+template<typename T,      // type of object to create
          typename... Ts>  // types of arguments to use
 void doSomeWork(Ts&&... params)
 {
