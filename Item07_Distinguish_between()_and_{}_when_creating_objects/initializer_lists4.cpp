@@ -21,7 +21,7 @@ public:
 
   // std::init_list element type is now std::string
   Widget(std::initializer_list<std::string> il) {  // added
-    std::cout << "Widget(std::initializer_list<std::string>" << std::endl;
+    std::cout << "Widget(std::initializer_list<std::string>)" << std::endl;
   };
 
   // ...    // no implicit 
