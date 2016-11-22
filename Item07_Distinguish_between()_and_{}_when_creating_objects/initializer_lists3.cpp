@@ -21,7 +21,7 @@ public:
 
   Widget(std::initializer_list<bool> il) {  // element type is
                                             // now bool
-    std::cout << "Widget(std::initializer_list<long double>" << std::endl;
+    std::cout << "Widget(std::initializer_list<bool>)" << std::endl;
   };
 
   // ...                    // no implicit
