@@ -3,6 +3,15 @@
  *
  *   * In constructor calls, parentheses and braces have the same meaning as
  *     long as std::initializer_list parameters are not involved.
+ *
+ *   * If one or more constructors declare a parameter of type std::initializer_list,
+ *     calls using the braced initialization syntax strongly prefer the overloads
+ *     taking std::initializer_lists.  Strongly.  If there's any way for compilers
+ *     to construe a call using braced initializer to be to a constructor taking a
+ *     std::initializer_list, compilers will employ that interpretation.
+ *
+ *   * Even what would normally be copy and move construction can be hijacked by
+ *     std::initializer_list constructors.
  */
 
 #include <iostream>
@@ -15,11 +24,11 @@ public:
   };
 
   Widget(int i, double d) {  // as before
-    std::cout << "Widget(int double)" << std::endl;
+    std::cout << "Widget(int, double)" << std::endl;
   };
 
   Widget(std::initializer_list<long double> il) {  // added
-    std::cout << "Widget(std::initializer_list<long double>" << std::endl;
+    std::cout << "Widget(std::initializer_list<long double>)" << std::endl;
   };
 
   operator float() const {  // convert to float
