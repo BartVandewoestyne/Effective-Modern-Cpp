@@ -21,7 +21,6 @@ private:
   DataType values;
 };
 
-// TODO: check if this implementation of makeWidget() is OK.
 Widget makeWidget()
 {
   Widget w;

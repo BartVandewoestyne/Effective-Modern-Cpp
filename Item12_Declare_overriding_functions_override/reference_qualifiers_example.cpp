@@ -21,7 +21,6 @@ public:
 
 };
 
-// TODO: check if this implementation of makeWidget() is OK.
 Widget makeWidget()      // factory function (returns rvalue)
 {
   Widget w;
