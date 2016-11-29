@@ -1,3 +1,3 @@
 add_executable(invisible_proxy_types invisible_proxy_types.cpp)
 #add_executable(matrix_example matrix_example.cpp)
-add_executable(typed_initializer_idiom typed_initializer_idiom.cpp)
+add_executable(explicitly_typed_initializer_idiom explicitly_typed_initializer_idiom.cpp)
