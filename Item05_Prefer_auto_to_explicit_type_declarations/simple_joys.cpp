@@ -26,7 +26,8 @@ void dwim(It b, It e)   // for all elements in range from
 }
 
 // Simple joy 3: the delight of declaring a local variable whose type is that
-// of a closure.
+// of a closure.  But the type of a closure is known only to the compiler, hence
+// can't be written out...
 
 
 // Perhaps you're thinking that we don't really need auto to declare a variable
