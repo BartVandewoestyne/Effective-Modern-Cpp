@@ -1,3 +1,3 @@
-add_library(custom_deleters custom_deleters.cpp)
+add_executable(shared_ptr_things_to_know shared_ptr_things_to_know.cpp)
 add_library(multiple_control_blocks1 multiple_control_blocks1.cpp)
 add_library(multiple_control_blocks2 multiple_control_blocks2.cpp)
