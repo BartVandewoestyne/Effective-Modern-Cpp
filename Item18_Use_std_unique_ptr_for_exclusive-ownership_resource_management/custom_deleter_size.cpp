@@ -1,4 +1,9 @@
-// TODO: finish this!
+// TODO: finish this! 
+
+#include "investment.h"
+#include "utils.h"
+
+#include <memory>
 
 auto delInvmt1 = [](Investment* pInvestment)   // custom
                  {                             // deleter
@@ -13,7 +18,7 @@ makeInvestment(Ts&&... args);                     // Investment*
 
 void delInvmt2(Investment* pInvestment)           // custom
 {                                                 // deleter
-  makeLogEntry(pInvestment)                       // as function
+  makeLogEntry(pInvestment);                      // as function
   delete pInvestment;
 }
 
