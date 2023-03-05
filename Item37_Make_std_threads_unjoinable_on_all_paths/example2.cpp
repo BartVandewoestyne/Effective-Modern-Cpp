@@ -1,6 +1,8 @@
 #include "ThreadRAII.h"
 #include "utils.h"
 
+#include <functional>
+
 #if __cplusplus == 201103L
 constexpr auto tenMillion = 10000000;         // see Item 15
                                               // for constexpr
