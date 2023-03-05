@@ -112,12 +112,13 @@ int main()
 
   // Exception-safe calls
 
-  std::shared_ptr<Widget> spw(new Widget, cusDel);
+  {
+    std::shared_ptr<Widget> spw(new Widget, cusDel);
 
-  processWidget(spw, computePriority());      // correct, but not
-                                              // optimal; see below
+    processWidget(spw, computePriority());      // correct, but not
+                                                // optimal; see below
 
-  processWidget(std::move(spw),               // both efficient and
-                computePriority());           // exception safe
-
+    processWidget(std::move(spw),               // both efficient and
+                  computePriority());           // exception safe
+  }
 }
