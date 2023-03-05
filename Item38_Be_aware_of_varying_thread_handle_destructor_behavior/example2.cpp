@@ -2,7 +2,7 @@
 #include <thread>
 #include <utility>
 
-int calcValue() {};            // func to run
+int calcValue() { return 1; };            // func to run
 
 int main()
 {                                   // begin block
