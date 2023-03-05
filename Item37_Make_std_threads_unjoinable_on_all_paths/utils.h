@@ -15,4 +15,5 @@ void performComputation(std::vector<int>& goodVals)
 bool someFilter(int x)
 {
   std::cout << "someFilter(int)" << std::endl;
+  return true;
 }
