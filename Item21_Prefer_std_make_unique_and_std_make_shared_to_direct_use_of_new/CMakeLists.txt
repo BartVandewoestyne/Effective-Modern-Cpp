@@ -2,4 +2,4 @@ set_source_files_properties(reasons_for_preferring_make_functions.cpp PROPERTIES
 set_source_files_properties(limitations_of_make_functions.cpp PROPERTIES COMPILE_FLAGS -std=c++14)
 
 add_executable(reasons_for_preferring_make_functions reasons_for_preferring_make_functions.cpp)
-#add_executable(limitations_of_make_functions limitations_of_make_functions.cpp)
+add_executable(limitations_of_make_functions limitations_of_make_functions.cpp)
