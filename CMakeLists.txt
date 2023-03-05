@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8.12)
 
 # Note: the 'C' seems necessary for CMake 3.2.2 but might not be necessary with
 # later versions of CMake.
